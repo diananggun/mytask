@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/blog.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="/js/blog.js"></script>
+    <title>Dian Anggun Septiani</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="/assets/images/logo.jpeg" alt="Logo Dumbways" />
+      </div>
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog.html" class="active">My Project</a></li>
+      </ul>
+      <div class="button">
+        <a href="/contact.html">Contact Me</a>
+      </div>
+    </nav>
+
+    <div class="blog-form">
+      <h1>ADD MY PROJECT</h1>
+      <form onsubmit="addBlog(event)">
+        <div>
+          <label for="project-name">Project Name</label>
+          <input type="text" id="project-name" name="project-name" />
+        </div>
+        <div class="date">
+          <label for="start-date">Start Date</label>
+          <input type="date" id="start-date" name="start-date" />
+        </div>
+        <div class="date">
+          <label for="end-date">End Date</label>
+          <input type="date" id="end-date" name="end-date" />
+        </div>
+        <div>
+          <label for="description">Description</label>
+          <textarea id="description" name="description" rows="4"></textarea>
+        </div>
+        <div>
+          <label for="technology">Technologies</label>
+          <div class="checkbox-container">
+            <div class="checkbox-column">
+              <label>
+                <input type="checkbox" name="technology" value="nodejs" />
+                Node.js
+              </label>
+              <br />
+              <label>
+                <input type="checkbox" name="technology" value="reactjs" />
+                React.js
+              </label>
+            </div>
+            <div class="checkbox-column">
+              <label>
+                <input type="checkbox" name="technology" value="php" />
+                PHP
+              </label>
+              <br />
+              <label>
+                <input type="checkbox" name="technology" value="typescript" />
+                TypeScript
+              </label>
+            </div>
+          </div>
+        </div>
+        <label for="blog-image">Upload Image</label>
+        <div class="blog-image-container">
+          <input type="file" id="blog-image" name="blog-image" accept="image/*" />
+          <i class="fas fa-paperclip attach-icon"></i>
+        </div>
+        <div class="submit">
+          <button class="button-submit" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="blog">
+      <h1>My Project</h1>
+      <div id="contents" class="blog-list"></div>
+    </div>
+  </body>
+</html>
